@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package pou;
+
+
+message Textovka {
+    optional string text=1;
+    optional int32 id=2;
+}
+
+
+service GreeterService {
+    rpc SayHello (Textovka) returns (Textovka) {}
+}
